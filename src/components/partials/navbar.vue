@@ -1,48 +1,65 @@
 <template>
 <header>
-        <section class="container main-div px-5">
+        <section class="container main-div px-0">
             <nav class="navbar navbar-expand-lg  navbar-light">
-                <a class="navbar-brand a-text flex" href="index.html">
-                    <img src="./Images/logo.png" alt="Logo">
+                <a class="navbar-brand a-text flex" href="#">
+                   <h2>{{companies.company_name}}</h2>
                 </a>
                 <button class="navbar-toggler" style="color: lemonchiffon !important;" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-                    <ul class="navbar-nav mr-auto">
-
-                    </ul>
-
-                    <ul class="navbar-nav my-2 my-lg-0">
-                        <li class="nav-item active">
-                            <a class="nav-link mx-3" href="#">About <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link mx-3" href="#">Stories</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link mx-3" href="#">FAQ<span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link mx-3" href="#"> Blog</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link mx-3" href="#"> Login</a>
-                        </li>
-                    </ul>
-
-                </div>
+           
             </nav>
         </section>
     </header>
 </template>
+<script>
+export default {
+  name: '',
+  data() {
+    return {
+      secretKey: '$2b$10$Wb8VppNIDoAhIAB8n8oFnuCuOnANGbL7pxknMH8lhYplG40/hi5LC',
+      companies: null,
+      router: this.$route.params.companyid,
+    }
+  },
+  mounted() {
+    this.getCompany()
+  },
+  methods: {
+    async getCompany() {
+      try {
+        let response = await this.$http.get(
+          `https://api.jsonbin.io/b/5f20829bc58dc34bf5dca275`,
+          {
+            headers: {
+              'secret-key': this.secretKey,
+            },
+          },
+        )
+
+        console.log(this.router)
+
+        console.log(response.data)
+        this.companies = response.data.find(
+          (company) => company.objectID === this.router,
+        )
+        console.log(this.companies)
+      } catch (error) {
+        console.log(error.response)
+      }
+    },
+  },
+}
+</script>
+</script>
 <style scoped>
 header {
     width: 100%;
     background: #FFFFFF;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    margin-bottom: 40px;
 }
 
 .nav-item {
@@ -53,4 +70,4 @@ header {
     line-height: 19px;
     font-style: normal;
 }
-</style>>
+</style>
