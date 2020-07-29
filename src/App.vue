@@ -8,8 +8,9 @@
 </template>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -28,4 +29,13 @@
 #nav a.router-link-exact-active {
   color: #42b983;
 }
+     :root {
+            --main-txt-color: #0CB91E;
+            --paragraph-txt-color: #2F2E41;
+            --span-txt-color: #505050;
+            --button-bg-color: #2F2E41;
+            --main-padding-top: 20px;
+            --div-padding-top: 70px;
+        
+        }
 </style>
