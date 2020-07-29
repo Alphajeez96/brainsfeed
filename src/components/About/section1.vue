@@ -86,8 +86,10 @@
             </div>
 
             <div>
-              <h6>{{ companies ? companies.website_ : 'Not available' }}</h6>
+            
+               <h6>{{ companies ? companies.website_ : 'Not available' }}</h6>
             </div>
+            <div class="social__holder"></div>
           </div>
         </div>
       </div>

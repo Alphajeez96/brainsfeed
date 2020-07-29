@@ -6,7 +6,7 @@
       <div class="container px-0">
         <div class="row">
           <!-- Details holder here -->
-          <div class="col-md-8">
+          <div class="col-md-7">
             <div class="row white__bg">
               <!-- Image/screenshot here -->
               <div class="col-md-6 img__holder">
@@ -64,29 +64,10 @@
           </div>
 
           <!-- Mini side bar here -->
-          <div class="col-md-4 white__bg">
-            <h4>Company Info</h4>
-            <div>
-              <img :src="`${companies.logo}`" alt="" />
-            </div>
-            <div>
-              <span class="badge badge-pill badge-success">
-                {{ companies ? companies.type : 'Not available' }}
-              </span>
-            </div>
-            <div>
-              <h6>
-                {{ companies ? companies.company_name : 'Not available' }}
-              </h6>
-            </div>
-            <div>
-              <h6>
-                {{ companies ? companies.company_size : 'Not available' }}
-              </h6>
-            </div>
-
-            <div>
-              <h6>{{ companies ? companies.website_ : 'Not available' }}</h6>
+          <div class="col-md-5 white__bg">
+            <h4>About Us</h4>
+            <div class='about'>
+              <p>{{companies.Long_description}} </p>
             </div>
           </div>
         </div>
@@ -162,5 +143,10 @@ export default {
 
 .inline p {
   display: inline;
+}
+.about p{
+  text-align:left;
+  font-size: 14px;
+  line-height: 25px
 }
 </style>
