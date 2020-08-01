@@ -7,13 +7,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 import VueAxios from "vue-axios";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import {
-    faFacebook,
-    faTwitter,
-    faLinkedin,
-} from "@fortawesome/free-brands-svg-icons";
+import { faFacebook, faTwitter, faLinkedin, } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import VueGeolocation from 'vue-browser-geolocation';
 
 library.add(faFacebook, faLinkedin, faTwitter, faEnvelope, faArrowLeft);
 
@@ -25,7 +22,7 @@ const base = axios.create({
 
 Vue.config.productionTip = false;
 Vue.prototype.$http = base;
-Vue.use(VueAxios, axios);
+Vue.use(VueAxios, axios, VueGeolocation);
 
 new Vue({
     router,

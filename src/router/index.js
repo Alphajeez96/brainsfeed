@@ -20,6 +20,7 @@ const routes = [{
         component: () =>
             import ('../views/About.vue')
     },
+
 ]
 
 const router = new VueRouter({

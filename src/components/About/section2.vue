@@ -6,65 +6,10 @@
       <div class="container px-0">
         <div class="row">
           <!-- Details holder here -->
-          <div class="col-md-7">
-            <div class="row white__bg">
-              <!-- Image/screenshot here -->
-              <div class="col-md-6 img__holder">
-                <div>
-                  <img
-                    :src="`${companies.screenshot}`"
-                    class="img-fluid"
-                    alt=""
-                  />
-                </div>
-              </div>
 
-              <div class="col-md-6">
-                <div class="details">
-                  <h4>{{ companies ? companies.title_ : 'Not available' }}</h4>
-                  <h5 class="pt-3">
-                    Founded:
-                    <span>
-                      {{ companies ? companies.founded : 'Not available' }}
-                    </span>
-                  </h5>
-                  <h5 class="pt-3">
-                    headquaters:
-                    <span>
-                      {{ companies ? companies.headquarters : 'Not available' }}
-                    </span>
-                  </h5>
-                  <h5 class="pt-3">
-                    Industry:
-                    <span>
-                      {{ companies ? companies.industry : 'Not available' }}
-                    </span>
-                  </h5>
-                  <h5 class="pt-3">
-                    Address :
-                    <span>
-                      {{
-                        companies ? companies.companyAddress : 'Not available'
-                      }}
-                    </span>
-                  </h5>
-
-                  <div class="inline pt-3">
-                    <p>
-                      Rating:
-                      {{ companies ? companies.rating : 'Not available' }}
-                    </p>
-                    <p class="mx-4">
-                      Price: {{ companies ? companies.price : 'Not available' }}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
 
           <!-- Mini side bar here -->
-          <div class="col-md-5 white__bg">
+          <div class="col-md-7 white__bg">
             <h4>About Us</h4>
             <div class='about mt-4'>
               <p>{{companies.Long_description}} </p>
