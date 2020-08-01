@@ -9,12 +9,14 @@ import VueAxios from "vue-axios";
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faUserSecret, } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import Paginate from "vuejs-paginate";
 
 
 
 library.add(faUserSecret, )
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
+Vue.component("paginate", Paginate);
 
 const base = axios.create({
     baseURL: "https://api.jsonbin.io/b/5f20829bc58dc34bf5dca275",

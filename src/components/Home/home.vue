@@ -47,9 +47,10 @@
                      <h5 class="pt-3">
                     Description :
                     <span>
-                      {{
+                    <v-clamp autoresize :max-lines="2">{{
                          company.Short_description 
-                      }}
+                      }}</v-clamp>
+                      
                     </span>
                   </h5>
                     <router-link :to="{ name: 'About', params: { companyid: company.objectID }}">Read More</router-link>
@@ -64,7 +65,12 @@
 </template>
 <script>
 const axios = require('axios')
+import VClamp from 'vue-clamp'
+
 export default {
+  components: {
+    VClamp
+  },
   name: 'home',
   data() {
     return {
@@ -132,6 +138,7 @@ box-shadow: 2px 2px 7px -3px rgba(0,0,0,0.79);
   border-radius: 0.25rem;
   padding: 2rem;
   margin-top: 20px;
+
 }
 .details {
   text-align: left;
@@ -141,6 +148,7 @@ box-shadow: 2px 2px 7px -3px rgba(0,0,0,0.79);
 }
 h4{
   font-size: 20px;
+
 }
 h5{
   font-size: 16px;
