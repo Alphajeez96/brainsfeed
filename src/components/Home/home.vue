@@ -128,14 +128,14 @@ export default {
     font-size:20px
 }
 .white__bg {
-  background: white;
-  border: 2px solid white;
+ 
+
   width: 100%;
-  -webkit-box-shadow: 2px 2px 7px -3px rgba(0,0,0,0.79);
--moz-box-shadow: 2px 2px 7px -3px rgba(0,0,0,0.79);
-box-shadow: 2px 2px 7px -3px rgba(0,0,0,0.79);
-  margin-bottom: 24px;
-  border-radius: 0.25rem;
+	background: #F8F8F8; 
+	border: solid #BDBDBD 0; 
+	box-shadow: 5px 0 20px rgba(0, 0, 0, 0.1)  ; 
+	-webkit-box-shadow: 5px 0 20px rgba(0, 0, 0, 0.1)  ; 
+	-moz-box-shadow: 5px 0 20px rgba(0, 0, 0, 0.1)  ; 
   padding: 2rem;
   margin-top: 20px;
 
