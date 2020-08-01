@@ -2,40 +2,62 @@
   <div>
     <div class="container">
       <div class="row">
-        <div class="col-md-4 my-2 col-lg-4"  v-for="company in companies" :key="company.objectID">
-          <div class="card " style="width: 22rem"  >
-            <div class="card-body">
-              <!-- Company row here -->
-              <div class="row">
-                <div class="col-md-7">
-                  <h4 class="card-title">{{company.company_name}}</h4>
+    
+<div class="col-md-6" v-for="company in companies" :key="company.objectID" >
+            <div class="row white__bg">
+              <!-- Image/screenshot here -->
+              <div class="col-md-4 img__holder">
+                <div>
+                  <img
+                    :src="`${company.logo}`"
+                    class="img-fluid"
+                    alt=""
+                  />
                 </div>
-                <div class="col-md-5">
-                  <h5 class="card-title">Social Icons</h5>
+                <div class=''>
+                <h3>{{company.company_name}}</h3>
                 </div>
               </div>
 
-              <!-- Founded row here -->
-              <div class="row">
-                <div class="col-md-6">
-                  <h6 class="company__title">{{company.title_}}</h6>
-                  <h6 class="card-subtitle m mb-2 text-muted">
+              <div class="col-md-8">
+                <div class="details">
+                  <h4>{{  company.title_  }}</h4>
+               
+                  <h5 class="pt-3">
+                    headquaters:
+                    <span>
+                      {{ company.headquarters }}
+                    </span>
+                  </h5>
+                  <h5 class="pt-3">
+                    Industry:
+                    <span>
+                      {{  company.industry  }}
+                    </span>
+                  </h5>
+               
+   <h5 class="pt-3">
                     Founded:
-                    <span>{{company.founded}}</span>
-                  </h6>
+                    <span>
+                      {{ company.founded   }}
+                    </span>
+                  </h5>
+                  <div class="inline">
+                 
+                     <h5 class="pt-3">
+                    Description :
+                    <span>
+                      {{
+                         company.Short_description 
+                      }}
+                    </span>
+                  </h5>
+                    <router-link :to="{ name: 'About', params: { companyid: company.objectID }}">Read More</router-link>
+                  </div>
                 </div>
-                <div class="col-md-3"></div>
-                <div class="col-md-3 Logo__holder">LOGO</div>
               </div>
-
-              <p class="card-text pt-4">
-               {{company.Short_description}}
-              </p>
-              <router-link :to="{ name: 'About', params: { companyid: company.objectID }}">Read More</router-link>
-              <!-- <a href="#" class="card-link">Read More</a> -->
             </div>
           </div>
-        </div>
       </div>
     </div>
   </div>
@@ -98,5 +120,40 @@ export default {
 }
 .card-title{
     font-size:20px
+}
+.white__bg {
+  background: white;
+  border: 2px solid white;
+  width: 100%;
+  -webkit-box-shadow: 2px 2px 7px -3px rgba(0,0,0,0.79);
+-moz-box-shadow: 2px 2px 7px -3px rgba(0,0,0,0.79);
+box-shadow: 2px 2px 7px -3px rgba(0,0,0,0.79);
+  margin-bottom: 24px;
+  border-radius: 0.25rem;
+  padding: 2rem;
+  margin-top: 20px;
+}
+.details {
+  text-align: left;
+}
+.inline p {
+  display: inline;
+}
+h4{
+  font-size: 20px;
+}
+h5{
+  font-size: 16px;
+}
+ .pt-3 span{
+  font-size: 14px;
+  line-height: 22px;
+}
+a {
+  text-decoration: none !important;
+}
+h3{
+font-size: 22px;
+margin-top: 20px;
 }
 </style>

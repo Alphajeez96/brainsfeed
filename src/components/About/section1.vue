@@ -89,16 +89,25 @@
             
                <h6>{{ companies ? companies.website_ : 'Not available' }}</h6>
             </div>
-            <div class="social__holder"></div>
+            <div class="social__holder">
+                <font-awesome-icon icon="user-secret" />
+                  
+                    
+ 
+                </div>
+       
           </div>
         </div>
       </div>
     </div>
     </div>
-
     </div>
+   
 </template>
 <script>
+
+
+
 const axios = require('axios')
 const About = {
   props: ['companyid'],
