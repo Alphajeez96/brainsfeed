@@ -66,7 +66,7 @@
           <!-- Mini side bar here -->
           <div class="col-md-5 white__bg">
             <h4>About Us</h4>
-            <div class='about'>
+            <div class='about mt-4'>
               <p>{{companies.Long_description}} </p>
             </div>
           </div>
@@ -146,6 +146,7 @@ export default {
 }
 .about p{
   text-align:left;
+  
   font-size: 14px;
   line-height: 25px
 }

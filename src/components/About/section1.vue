@@ -22,12 +22,7 @@
               <div class="col-md-6">
                 <div class="details">
                   <h4>{{ companies ? companies.title_ : 'Not available' }}</h4>
-                  <h5 class="pt-3">
-                    Founded:
-                    <span>
-                      {{ companies ? companies.founded : 'Not available' }}
-                    </span>
-                  </h5>
+                
                   <h5 class="pt-3">
                     headquaters:
                     <span>
@@ -48,7 +43,12 @@
                       }}
                     </span>
                   </h5>
-
+  <h5 class="pt-3">
+                    Founded:
+                    <span>
+                      {{ companies ? companies.founded : 'Not available' }}
+                    </span>
+                  </h5>
                   <div class="inline pt-3">
                     <p>
                       Rating:
@@ -70,17 +70,17 @@
               <img :src="`${companies.logo}`" alt="" />
             </div>
             <div>
-              <span class="badge badge-pill badge-success">
+              <span class="badge badge-pill mt-3 badge-success">
                 {{ companies ? companies.type : 'Not available' }}
               </span>
             </div>
             <div>
-              <h6>
+              <h6 class='mt-3 '>
                 {{ companies ? companies.company_name : 'Not available' }}
               </h6>
             </div>
             <div>
-              <h6>
+              <h6 class='mt-3 '>
                 {{ companies ? companies.company_size : 'Not available' }}
               </h6>
             </div>
@@ -173,5 +173,25 @@ export default {
 
 .inline p {
   display: inline;
+
 }
+
+h4{
+  font-size: 20px;
+
+}
+h5{
+  font-size: 16px;
+}
+ .pt-3 span{
+  font-size: 14px;
+  line-height: 22px;
+}
+a {
+  text-decoration: none !important;
+}
+h3{
+font-size: 22px;
+margin-top: 20px;}
+
 </style>
