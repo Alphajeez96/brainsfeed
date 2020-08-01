@@ -2,6 +2,14 @@
 
   <div>
     <cnav></cnav>
+    <div class='container px-0'>
+     <div class='back  '>
+     <router-link to='/'> <button class="btn btn-outline-info mb-3"> <font-awesome-icon class='mx-2' :icon="{ prefix: 'fa', iconName: 'arrow-left' }"></font-awesome-icon>Back</button></router-link>
+     
+    </div>
+    </div>
+   
+
  <div>
   <section1></section1>
   <section2></section2>
@@ -22,3 +30,8 @@ export default {
   }
 }
 </script>
+<style scoped>
+.back{
+  text-align: left;
+}
+</style>>

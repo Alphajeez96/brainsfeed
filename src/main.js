@@ -8,13 +8,13 @@ import axios from "axios";
 import VueAxios from "vue-axios";
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faFacebook, faTwitter, faLinkedin, } from '@fortawesome/free-brands-svg-icons'
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 
 
 
-library.add(faFacebook, faLinkedin, faTwitter, faEnvelope)
+library.add(faFacebook, faLinkedin, faTwitter, faEnvelope, faArrowLeft)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 

@@ -1,6 +1,6 @@
 <template>
 <header>
-        <section class="container main-div px-0">
+        <section class="container main-iv px-0">
             <nav class="navbar navbar-expand-lg  navbar-light">
                 <a class="navbar-brand a-text flex" href="#">
                    <h2>{{companies.company_name}}</h2>
